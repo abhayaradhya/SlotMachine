@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abhayaradhya.slotmachine2.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/spinnerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/spinner1"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/spinboxbackground"/>
+
+        <ImageView
+            android:id="@+id/spinner2"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/spinboxbackground"/>
+
+        <ImageView
+            android:id="@+id/spinner3"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/spinboxbackground"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/difficultyLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difficulty: "/>
+
+        <SeekBar
+            android:id="@+id/difficultyBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:max="2"
+            android:progress="0"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_below="@id/difficultyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Start"
+        android:onClick="startStopButton"/>
+
+    <Button
+        android:id="@+id/rulesButton"
+        android:layout_below="@id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Rules"
+        android:onClick="showRules"/>
+
+    <LinearLayout
+        android:id="@+id/scoreLayout"
+        android:layout_below="@id/rulesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/scoreLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Score: "/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="0"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
